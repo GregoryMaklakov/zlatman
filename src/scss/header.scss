@@ -1,15 +1,236 @@
 //====================================================================================================
+//HEADER TOP
+
+.header {
+	&__top {
+		background-color: $mainDarkColor;
+		color: #fff;
+		padding: rem(20) rem(0) rem(20) rem(0);
+	}
+}
+.top-header {
+	&__container {
+		display: flex;
+		align-items: center;
+		gap: rem(20);
+	}
+	&__menu {
+		flex: 1 1 auto;
+	}
+	&__user {
+		display: flex;
+		flex-direction: row;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: math.div(22, 18);
+		&:before{
+			font-size: rem(28);		
+			margin-right: rem(15);	
+		}
+	}
+}
+.menu {
+
+	&__body {
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: row;
+		row-gap: 8px;
+		@include adaptiveValue("column-gap", 60, 30);
+		flex-wrap: wrap;
+	}
+
+	&__item {
+	}
+
+	&__link {
+		font-size: 16px;
+	}
+}
+
+//HEADER Genera l=========================
+
+.header {
+	&__general {
+	}
+}
+.general-header {
+	padding: rem(10) 0;
+	background-color: #ECF1F2;
+	&__container {
+		display: flex;
+		min-height: 70px;
+		align-items: center;
+	}
+	// Получаем лого через @ex 
+	&__logo {
+		@extend %ic;
+		@extend ._icon-logo;
+		font-size: rem(42);
+		color: $mainDarkColor;
+	}
+	&__search {
+		flex: 1 1 auto; // прижимаеи actions к правому краю контейнера
+	}
+}
+.search-header {
+	@include adaptiveValue("margin-left", 158, 20);
+	background: url(../img/icons/search.svg) 4% 54% no-repeat;
+	background-size: rem(18);
+	width: 377px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.5s all;
+	&__input {
+		width: 100%;
+		padding: rem(15) rem(10) rem(15) rem(40);
+		background: rgba(7, 7, 7, 0.03);
+		border-radius: 3px;
+		color: $mainColor;
+		&::placeholder {
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 17px;
+			color: rgba(0, 0, 0, 0.5);
+		}
+	}
+	input:focus {
+		outline: none !important;
+		border: 1px solid rgba(4, 4, 4, 0.5);
+	}
+}
+//  HEADER Actions =========================
+
+.actions-header {
+	display: flex;
+	align-items: center;
+	@include adaptiveValue("gap", 30, 12);
+	@include adaptiveValue("margin-left", 40, 20);
+	&__locarion {
+		display: flex;
+		align-items: center;
+		font-weight: 600;
+		font-size: rem(18);
+		line-height: math.div(22, 18);
+		&::before{
+			font-size: rem(24);
+			color: $mainColor;
+			margin-right: rem(10);
+		}
+	}
+
+	&__phones {
+
+	}
+
+	&__favorite {
+		font-size: rem(26);
+	}
+
+	&__cart {
+		
+	}
+}
+
+/* 	&_icon-location {
+	}
+
+	&_icon-arrow {
+	}
+
+	&_icon-favorite {
+	} */
+
+.phones-header {
+	&__items {
+	}
+
+	&__item {
+		position: relative;
+	}
+
+	&__phone {
+		font-size: 18px;
+		line-height: math.div( 22, 18);
+		color: #000000;
+		white-space: nowrap;
+	}
+
+	&__arrow {
+		margin-left: rem(10);
+		color: #E8AA31;
+		transition: .3s ease;
+		&._spoller-active {
+			transform: rotate(180deg);
+		}
+	}
+
+	&__list {
+		position: absolute;
+		margin-top: rem(4);
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background-color: #e9eced;
+		-webkit-box-shadow: 1px 14px 42px -27px rgba(88, 90, 111, 1);
+		-moz-box-shadow: 1px 14px 42px -27px rgba(88, 90, 111, 1);
+		box-shadow: 1px 14px 42px -27px rgba(88, 90, 111, 1);
+		padding: rem(15);
+		border-radius: rem(5);
+		li {
+			&:not(:last-child) {
+				margin-bottom: rem(10);
+			}
+		}
+	}
+	&__callback {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 22px;
+		color: #E8AA31;
+		margin-top: 5px;
+		cursor: pointer;
+	}
+}
+.cart-header {
+	display: flex;
+	@include adaptiveValue("gap", 22, 10);
+	&__icon {
+		background-image: url(../img/icons/cart.svg);
+		background-position: center; /* Center the image */
+		background-repeat: no-repeat; /* Do not repeat the image */
+		background-size: cover; 
+		width: 31px;
+        height: 31px;
+	}
+
+	&__body {
+	}
+
+	&__summ {
+	}
+
+	&__link {
+		font-weight: 500;
+		font-size: rem(16);
+		line-height: math.div( 20, 16);
+		color: #E8AA31;
+		margin-top: rem(7);
+	}
+}
 
 //====================================================================================================
 
 //Burger
-/*
 .icon-menu {
 	display: none;
 	@media (max-width: $mobile) {
 		display: block;
 		position: relative;
-		width: rem(30);
+		flex: 0 0 30px; // задаем ширину бургера что бы его не плющело (width - не подходит)
 		height: rem(18);
 		z-index: 5;
 		@media (any-hover: none) {
@@ -24,7 +245,7 @@
 			position: absolute;
 			width: 100%;
 			height: rem(2);
-			background-color: #000;
+			background-color: #fff;
 		}
 		&::before {
 			top: 0;
@@ -53,4 +274,4 @@
 		}
 	}
 }
-*/
+
