@@ -6,7 +6,78 @@
 	<body>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
-			<main class="page">
+			<main class="page page-general">
+				<section class="page__main-block main-block">
+					<div class="main-block__container">
+
+						<!-- Оболочка слайдера -->
+						<div class="main-block__body">
+							<div class="main-block__slider swiper">
+								<!-- Двигающееся часть слайдера -->
+								<div class="main-block__wrapper swiper-wrapper">
+									<!-- Слайд -->
+									<div class="main-block__slide swiper-slide">
+										<div class="swiper-slide__content">
+											<h2 class="swiper-slide__title">Интернет магазин сертифицированных златоустовских ножей</h2>
+											<div class="swiper-slide__sub-litle">Добро пожаловать на официальный сайт «ЗЛАТМАКС»! В нашем 	магазине представлен наиболее широкий выбор Златоустовских ножей от Златоустовских 
+												Оружейных Фабрик и компаний, мы являемся официальными поставщиками.
+											</div>
+											<a href="#" class="swiper-slide__button button">Подробнее</a>
+										</div>
+									</div>
+								</div>
+								
+								<!-- Если нужна пагинация -->
+								<!-- <div class="swiper-pagination"></div> -->
+								<!-- Если нужна навигация (влево/вправо) -->
+
+								<!-- <button type="button" class="swiper-button-prev"></button>
+								<button type="button" class="swiper-button-next"></button> -->
+								
+								<!-- Если нужен скролбар -->
+								<div class="swiper-scrollbar"></div>
+							</div>
+							<div class="main-block__media media-main-block">
+								<div class="media-main-block__image">
+									<img src="@img/main-block/main-block-knife.png" alt="knife">
+								</div>
+								<div class="media-main-block__tips">
+									<div data-tippy-content="more" class="media-main-block__tip media-main-block__tip_1">+</div>
+									<div data-tippy-content="more" class="media-main-block__tip media-main-block__tip_2">+</div>
+									<div data-tippy-content="more" class="media-main-block__tip media-main-block__tip_3">+</div>
+								</div>
+								
+							</div>
+						</div>
+						
+						<div class="main-block__advantages advantages-main">
+							<div class="advantages-main__item">
+								<div class="advantages-main__icon">
+									<img src="@img/main-block/01.svg" alt="image">
+								</div>
+								<div class="advantages-main__text">Гарантия 100% возврата денежных средств</div>
+							</div>
+							<div class="advantages-main__item">
+								<div class="advantages-main__icon">
+									<img src="@img/main-block/02.svg" alt="image">
+								</div>
+								<div class="advantages-main__text">Доставка по Украине, Казахстану и Польще</div>
+							</div>
+							<div class="advantages-main__item">
+								<div class="advantages-main__icon">
+									<img src="@img/main-block/03.svg" alt="image">
+								</div>
+								<div class="advantages-main__text">Возможность оформление заказа без регистрации.</div>
+							</div>
+							<div class="advantages-main__item">
+								<div class="advantages-main__icon">
+									<img src="@img/main-block/04.svg" alt="image">
+								</div>
+								<div class="advantages-main__text">Скидки постоянным покупателям. </div>
+							</div>
+						</div>
+					</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

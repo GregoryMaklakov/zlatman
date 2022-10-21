@@ -1,3 +1,109 @@
-//====================================================================================================
+//====================================     MAIN - BLOCK    ==================================================
+.page {
+    &__main-block {
+    }
+}
+.main-block {
+    background: url(img/main-block/bg.jpg) center / cover no-repeat;
+    &__container {
+        padding-top: rem(48);
+        padding-bottom: rem(64);
+        display: flex;
+        flex-direction: column;
+    }
+    &__body {
+        display: flex;
+    }
+
+    &__slider {
+    }
+
+    &__wrapper {
+    }
+
+    &__slide {
+    }
+
+    &__media {
+    }
+
+    &__advantages {
+    }
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+
+    &__content {
+        max-width: rem(915);
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: rem(36);
+        line-height: math.div( 46, 36);
+        text-align: left;
+        letter-spacing: 0.03em;
+        color: #FFFFFF;
+    }
+
+    &__sub-litle {
+        margin-top: rem(30);
+        font-weight: 500;
+        font-size: rem(20);
+        line-height: math.div( 30, 20);
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: rem(60);
+    }
+
+    &__button {
+        transition: .3s all;
+        @media (any-hover: hover){
+            &:hover{
+                background-color: rgba($color: $mainOrangeColor, $alpha: 0.1);
+                box-shadow: none;
+            }
+        }
+    
+    }
+}
+
+.swiper-scrollbar {
+}
+.media-main-block {
+
+    &__image {
+    }
+
+    &__tips {
+    }
+
+    &__tip {
+
+        &_1 {
+        }
+
+        &_2 {
+        }
+
+        &_3 {
+        }
+    }
+}
+.advantages-main {
+
+    &__item {
+    }
+
+    &__icon {
+    }
+
+    &__text {
+    }
+}
 
 //====================================================================================================
+//========================================================================================================================================================
