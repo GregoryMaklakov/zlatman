@@ -1,6 +1,7 @@
 //====================================     MAIN - BLOCK    ==================================================
 .page {
     &__main-block {
+
     }
 }
 .main-block {
@@ -12,10 +13,12 @@
         flex-direction: column;
     }
     &__body {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr percent(635, 1590);
     }
 
     &__slider {
+        padding-left: rem(15);
     }
 
     &__wrapper {
@@ -30,6 +33,51 @@
     &__advantages {
     }
 }
+.swiper-pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: rem(20);
+    height: rem(20);
+    margin-top: rem(45);
+}
+.swiper-pagination-bullets {
+
+}
+.swiper-pagination-bullet {
+    display: flex;
+    flex-direction: row;
+    width: rem(18);
+    height: 0px;
+    border: 2px solid #FFFFFF;
+    border-radius: rem(2);
+    cursor: pointer;
+}
+.swiper-pagination-bullet-active {
+    border: 2px solid $mainOrangeColor;
+    position: relative;
+    width: rem(25);
+    transition: all 0.5s ease 0s;
+    &::before{
+        content:'';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        top: -50%;
+        transform: translateY(-50%);
+        left: -8px;
+        background: #E8AA31;
+        border-radius: 50%;
+        box-shadow: 0px 4px 20px rgba(232, 170, 49, 0.66);
+    }
+} 
+
+//========================================================================================================================================================
+
 .swiper {
 }
 .swiper-wrapper {
@@ -74,34 +122,114 @@
 .swiper-scrollbar {
 }
 .media-main-block {
-
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: rem(10);
     &__image {
+        position: relative;
+        img {
+            position: relative;
+            z-index: 2;
+        }
+        &::before{
+            content:'';
+            position: absolute;
+            width: rem(423);
+            height: rem(423);
+            display: flex;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            transform: translate(percent(141, 423));
+            bottom: 1%;
+            border-radius: 50%;
+            z-index: 1;
+        }
     }
 
     &__tips {
+        z-index: 5;
     }
-
     &__tip {
-
-        &_1 {
+        width: rem(20);
+        height: rem(20);
+        position: absolute;
+        transition: all 0.3s ease 0s;
+            @media (any-hover: hover){
+                &:hover{
+                    transform: rotate(-180deg) scale(1.1);
+                }
+            }
+        cursor: pointer;
+            &::before, 
+            &::after { 
+            content:'';
+            background-color: $mainOrangeColor;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            
         }
-
+            &::after { 
+            content: '';
+            transform: scale(1.6);
+            opacity: 0.5;
+        }
+        span {
+            z-index: 2;
+            color:#ffff;
+            font-size: rem(20);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        &_1 {
+            top: percent(120, 639);
+            right: percent(40, 519);
+        }
         &_2 {
+            top: percent(260, 639);
+            left: percent(100, 519);
         }
 
         &_3 {
+            bottom: percent(112, 639);
+            right: percent(66, 519);
         }
     }
 }
 .advantages-main {
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: rem(42);
+    gap: rem(20);
     &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     &__icon {
     }
 
     &__text {
+        font-weight: 600;
+        @include adaptiveValue("font-size", 20, 14);
+        line-height: math.div(32 , 20);
+        text-align: center;
+        color: #FFFFFF;
+        max-width: rem(290);
     }
 }
 
