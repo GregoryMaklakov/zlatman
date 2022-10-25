@@ -42,7 +42,7 @@ function initSliders() {
 			speed: 1200,
 
 			autoplay: {
-				delay: 4000,
+				delay: 3500,
 				desableOnInteraction: false
 			},
 
@@ -100,7 +100,16 @@ function initSliders() {
 			*/
 			// События
 			on: {
-
+				init: function (swiper) {
+					const allSlides = document.querySelector('.fraction-controls__all');
+					allSlides.innerHTML = swiper.slides.length < 10 ? `0${swiper.slides.length}` : swiper.slides.length;
+					console.log(swiper);
+				},
+				slideChange: function (swiper) {
+					const currentSlides = document.querySelector('.fraction-controls__current');
+					currentSlides.innerHTML = swiper.activeIndex + 1 < 10 ? `0${swiper.activeIndex + 1}` : swiper.activeIndex + 1;
+					console.log(swiper);
+				}
 			}
 		});
 	}

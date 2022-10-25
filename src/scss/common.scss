@@ -1,1 +1,93 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+// Item Catalog Card ==================================================
+.catalog-cards {
+    &__item {
+        max-width: rem(509);
+        min-height: rem(293);
+        background: #FFFFFF;
+        width: 100%;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+        
+    }
+}
+.item-card {
+    padding: rem(30) rem(30) rem(60) rem(30);
+    position: relative;
+    @media (max-width:$mobile){
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center; 
+    }
+    &__title {
+        font-weight: 600;
+        font-size: rem(24);
+        line-height: math.div( 34, 24);
+        color: #000000;
+        position: relative;
+        z-index: 3;
+        &::after {
+            content:'';
+            position: absolute;
+            width: rem(68);
+            height: 0px;
+            bottom: -15px;
+            display: block;
+            border: 1px solid $mainOrangeColor;
+        }
+    }
+    &__body {
+        display: flex;
+    }
+
+    &__list {
+        padding-top: rem(45);
+        display: flex;
+        flex-direction: column;
+        gap: rem(10);
+        z-index: 3;
+    }
+
+    &__link {
+        font-weight: 500;
+        font-size: rem(18);
+        line-height: math.div( 34, 18);
+        color: #000000;
+        position: relative;
+        padding-left: rem(15);
+        &::before{
+            content:'';
+            background: $mainOrangeColor;
+            position: absolute;
+            top: 45%;
+            transform: translate(-50%);
+            display: block;
+            width: rem(6);
+            height: rem(6);
+            border-radius: 50%;
+            left: 0;
+            transition: all 0.3s ease 0s;
+        }
+        @media (any-hover: hover){
+            &:hover{
+                transition: all 0.3s ease 0s;
+                color: $mainOrangeColor;
+                &::before{
+                    content:'';
+                    transform: scale(1.5);
+                }
+            }
+        }
+    }
+
+    &__image {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        @media (max-width:$mobile){
+            opacity: 0.3; 
+       }
+    }
+}
+//  ==================================================   Item Catalog Card END   ==================================================

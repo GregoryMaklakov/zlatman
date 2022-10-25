@@ -4,8 +4,13 @@
 
     }
 }
+
 .main-block {
     background: url(img/main-block/bg.jpg) center / cover no-repeat;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    @media (max-width:$mobile){
+        background: url(img/main-block/bg-mobile.jpg ) center / cover no-repeat;
+    }
     &__container {
         padding-top: rem(48);
         padding-bottom: rem(64);
@@ -15,24 +20,15 @@
     &__body {
         display: grid;
         grid-template-columns: 1fr percent(635, 1590);
+        @media (max-width:$mobile){
+            grid-template-columns: 1fr;
+        }
     }
-
     &__slider {
         padding-left: rem(15);
     }
-
-    &__wrapper {
-    }
-
-    &__slide {
-    }
-
-    &__media {
-    }
-
-    &__advantages {
-    }
 }
+// погинация - фракция ( счетчик слайдов и панель )============
 .swiper-pagination {
     display: flex;
     flex-direction: row;
@@ -41,9 +37,9 @@
     gap: rem(20);
     height: rem(20);
     margin-top: rem(45);
-}
-.swiper-pagination-bullets {
-
+    @media (max-width: em(424.98)){
+          display: none;
+    }
 }
 .swiper-pagination-bullet {
     display: flex;
@@ -53,12 +49,6 @@
     border: 2px solid #FFFFFF;
     border-radius: rem(2);
     cursor: pointer;
-}
-.swiper-pagination-bullet-active {
-    border: 2px solid $mainOrangeColor;
-    position: relative;
-    width: rem(25);
-    transition: all 0.5s ease 0s;
     &::before{
         content:'';
         display: flex;
@@ -73,17 +63,50 @@
         background: #E8AA31;
         border-radius: 50%;
         box-shadow: 0px 4px 20px rgba(232, 170, 49, 0.66);
+        opacity: 0;
+        transition: left 3s;
     }
+}
+.swiper-pagination-bullet-active {
+    border: 2px solid $mainOrangeColor;
+    position: relative;
+    width: rem(25);
+    transition: all 0.5s ease 0s;
+    &::before{
+        content:'';
+        opacity: 1;
+        left: rem(18);
+    }
+   
 } 
-
-//========================================================================================================================================================
-
-.swiper {
+// 01/04 > ======
+.swipper-controls{
+    display: flex;
+    gap: rem(40);
+    align-items: flex-end;
+    @media (max-width: em(424.98)){
+        display: none;
+  }
 }
-.swiper-wrapper {
+.fraction-controls {
+    display: flex;
+    font-weight: 600; 
+    color: #FFFFFF;
+    align-items: flex-end;
+    &__current {
+        font-size: rem(24);
+        letter-spacing: 0.1em;
+        color: $mainOrangeColor;
+    }
+    &__all {
+        font-size: rem(18);
+        letter-spacing: 0.1em;
+        color: #FFFFFF;
+    }
 }
+
+// Двигающаяся часть слайдера =================================
 .swiper-slide {
-
     &__content {
         max-width: rem(915);
     }
@@ -115,12 +138,13 @@
                 box-shadow: none;
             }
         }
-    
+        @media (max-width: em(424.98)){
+            display: none;
+      }
     }
 }
 
-.swiper-scrollbar {
-}
+// картирка и желтые плюсы ====================================
 .media-main-block {
     position: relative;
     display: flex;
@@ -130,6 +154,7 @@
     &__image {
         position: relative;
         img {
+            max-width: 100%;
             position: relative;
             z-index: 2;
         }
@@ -144,11 +169,16 @@
             bottom: 1%;
             border-radius: 50%;
             z-index: 1;
+            @media (max-width: em(424.98)){
+                display: none;
+          }
         }
     }
-
     &__tips {
         z-index: 5;
+        @media (max-width: em(424.98)){
+            display: none;
+      }
     }
     &__tip {
         width: rem(20);
@@ -200,30 +230,34 @@
             top: percent(260, 639);
             left: percent(100, 519);
         }
-
         &_3 {
             bottom: percent(112, 639);
             right: percent(66, 519);
         }
     }
 }
+
+// advantages ================================================
 .advantages-main {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: rem(42);
     gap: rem(20);
+    @media (max-width:$mobile){
+         flex-wrap: wrap; 
+         justify-content: center;
+         align-items: center;
+         gap: rem(30);
+    }
     &__item {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-
-    &__icon {
-    }
-
     &__text {
+        margin-top: rem(20);
         font-weight: 600;
         @include adaptiveValue("font-size", 20, 14);
         line-height: math.div(32 , 20);
@@ -233,5 +267,23 @@
     }
 }
 
-//====================================================================================================
+//==================================================  MAIN - BLOCK END  ==========================================================================
+
 //========================================================================================================================================================
+
+.catalog-cards {
+    padding: rem(130) rem(0) rem(120) rem(0);
+    &__container {
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        @include adaptiveValue("gap", 30, 14);
+        @media (max-width: em(1621)){
+            justify-content: center;   
+        }
+    }
+}
