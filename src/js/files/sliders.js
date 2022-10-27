@@ -27,6 +27,7 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Перечень слайдеров
 	// Проверяем, есть ли слайдер на стронице
+	// Main Slider 
 	if (document.querySelector('.main-block__slider')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
 		new Swiper('.main-block__slider', { // Указываем скласс нужного слайдера
@@ -47,7 +48,7 @@ function initSliders() {
 			},
 
 			//touchRatio: 0,
-			//simulateTouch: false,
+			simulateTouch: true,
 			//loop: true,
 			//preloadImages: false,
 			//lazy: true,
@@ -110,6 +111,126 @@ function initSliders() {
 					currentSlides.innerHTML = swiper.activeIndex + 1 < 10 ? `0${swiper.activeIndex + 1}` : swiper.activeIndex + 1;
 					console.log(swiper);
 				}
+			}
+		});
+	}
+	// Second Slider (Products)
+	if (document.querySelector('.product-slider__slider')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.product-slider__slider', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation, Pagination, Autoplay],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 30,
+			autoHeight: true,
+			speed: 1200,
+			mousewheel: true,
+
+			autoplay: {
+				delay: 3500,
+				desableOnInteraction: false
+			},
+
+			//touchRatio: 0,
+			//simulateTouch: true,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			// Пагинация
+			
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+
+			// Брейкпоинты
+			
+	 		 	breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+					autoHeight: true,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1368: {
+					slidesPerView: 4,
+					spaceBetween: 30,
+				},
+			},  
+			
+			// События
+			on: {
+			}
+		});
+	}
+	// Tird slider (NewProducts)
+	if (document.querySelector('.new-product-slider__slider')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.new-product-slider__slider', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation, Pagination, Autoplay],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 30,
+			autoHeight: true,
+			speed: 1200,
+			mousewheel: true,
+
+			autoplay: {
+				delay: 2000,
+				desableOnInteraction: false
+			},
+
+			//touchRatio: 0,
+			//simulateTouch: true,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			// Пагинация
+			
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+
+			// Брейкпоинты
+			
+	 		 	breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+					autoHeight: true,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				992: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				1368: {
+					slidesPerView: 3,
+					spaceBetween: 30,
+				},
+			},  
+			
+			// События
+			on: {
 			}
 		});
 	}

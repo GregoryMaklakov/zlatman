@@ -25,6 +25,7 @@
 										</div>
 										<a href="#" class="swiper-slide__button button" data-swiper-parallax="-300">Подробнее</a>
 									</div>
+
 									<div class="main-block__slide swiper-slide">
 										<div class="swiper-slide__content">
 											<h2 class="swiper-slide__title" data-swiper-parallax="-100">Интернет магазин сертифицированных златоустовских ножей</h2>
@@ -34,6 +35,7 @@
 										</div>
 										<a href="#" class="swiper-slide__button button" data-swiper-parallax="-300">Подробнее</a>
 									</div>
+									
 									<div class="main-block__slide swiper-slide">
 										<div class="swiper-slide__content">
 											<h2 class="swiper-slide__title" data-swiper-parallax="-100">Интернет магазин сертифицированных златоустовских ножей</h2>
@@ -107,6 +109,7 @@
 						</div>
 					</div>
 				</section>
+
 				<section class="page__catalog-cards catalog-cards">
 					<div class="catalog-cards__container">
 						<div class="catalog-cards__wrapper">
@@ -193,6 +196,14 @@
 						</div>
 					</div>
 				</section>
+				@@include('html/_product-slider.htm',{
+					"title":"Хиты продаж",
+					"moretext":"Перейти в каталог"
+				})
+				@@include('html/_new-product-slider.htm',{
+					"title":"Новинки",
+					"moretext":"Больше новинок"
+				})
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
