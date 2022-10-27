@@ -3,7 +3,7 @@
 .rating {
 	display: flex;
 	align-items: flex-end;
-	font-size: 40px;
+	font-size: rem(22);
 	line-height: 0.75;
 	transition: opacity 0.3s ease 0s;
 }
@@ -37,7 +37,7 @@
 	height: 100%;
 	top: 0;
 	left: 0;
-	color: #ffd300;
+	color: $mainOrangeColor;
 }
 
 .rating__items {
@@ -54,7 +54,9 @@
 	opacity: 0;
 }
 .rating__value {
+	display: none;
 	font-size: 50%;
 	line-height: 1;
 	padding: 0px 0px 0px 10px;
 }
+
