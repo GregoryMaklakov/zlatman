@@ -1,0 +1,97 @@
+.catalog {
+    background-color:#FFFFFF;
+    &__container {
+    }
+
+    &__head-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__head {
+    }
+
+    &__title {
+    }
+
+    &__control {
+        min-width: rem(320);
+        align-self: flex-end;
+        margin-bottom: rem(30);
+    }
+}
+
+.body-catalog {
+    display: grid;
+    grid-template-columns: rem(375) 1fr;
+    gap: rem(30);
+    @include adaptiveValue("padding-bottom", 120, 30);
+    &__filter {
+    }
+
+    &__content {
+        
+    }
+}
+
+
+.catalog {
+
+    &__body {
+    }
+}
+.body-catalog {
+
+    &__filter {
+    }
+
+    &__content {
+    }
+}
+.content-catalog {
+        display: flex;
+        flex-direction: column;
+        gap: rem(60);
+    &__catalog {
+        display: grid;
+        gap: rem(20);
+        grid-template-columns: repeat(3,minmax(rem(290), rem(375)));
+        @media (max-width: em(1360)){
+            grid-template-columns: repeat(auto-fill,minmax(rem(290), rem(375)));
+        }
+    }
+
+    &__footer {
+    }
+}
+
+.catalog-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__more {
+        border: 2px solid $mainOrangeColor;
+        filter: drop-shadow(0px 4px 20px rgba(232, 170, 49, 0.43));
+        border-radius: 3px;
+        padding: rem(12) rem(70);
+        font-weight: 600;
+        font-size: rem(20);
+        color: $mainOrangeColor;
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover){
+            &:hover{
+                color: white;
+                background-color: $mainOrangeColor;
+            }
+        }
+    }
+    &__more:focus {
+        border: 2px solid #ffff;
+    }
+
+    &__pagging {
+    }
+}
+
+
+//========================================================================================================================================================

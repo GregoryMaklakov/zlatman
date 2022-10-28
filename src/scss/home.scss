@@ -3,6 +3,9 @@
     &__main-block {
 
     }
+    &__inner {
+        padding-top: rem(30);
+    }
 }
 
 .main-block {
@@ -274,7 +277,7 @@
 
 //=====================================================  Catalog-Cards  ===================================================================================
 .catalog-cards {
-    background: #E5E5E5;
+    background: #FFFFFF;
     &__container {
         @include adaptiveValue("padding-top", 130, 40);
         @include adaptiveValue("padding-bottom", 120, 40);
@@ -298,7 +301,7 @@
 //=====================================================  Product-Slider   =============================================================================
 
 .product-slider {   
-    background: #E5E5E5;
+    background: #FFFFFF;
     &__container {
         @include adaptiveValue("padding-top", 80, 30);
         @include adaptiveValue("padding-bottom", 164, 30);
@@ -417,7 +420,7 @@
 .articles {
     @include adaptiveValue("padding-top", 120, 30);
     @include adaptiveValue("padding-bottom", 120, 30);
-    background: #E5E5E5;
+    background: #FFFFFF;
     &__title {
         font-weight: 700;
         font-size: rem(30);
@@ -435,7 +438,7 @@
 .item-article {
     display: flex;
     flex-direction: column;
-    background: #FEFEFE;
+    background: #FFFFFF;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);    
     min-height: 100%;
     overflow: hidden;
@@ -481,7 +484,7 @@
 //=====================================================     Flashlight    ==================================================================================================
 .flashlight {
     @include adaptiveValue("padding-bottom", 120, 60);
-    background: #E5E5E5;
+    background: #FFFFFF;
     &__container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -559,7 +562,7 @@
     }
 }
 .flashlight-catacol {
-    background: #E5E5E5;
+    background: #FFFFFF;
     @include adaptiveValue("padding-bottom", 120, 30);
     &__container {
     }
@@ -611,5 +614,7 @@
         color: #FFFFFF;
     }
 }
+
+//========================================================================================================================================================
 
 

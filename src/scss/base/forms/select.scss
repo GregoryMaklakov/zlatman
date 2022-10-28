@@ -122,6 +122,24 @@
 	}
 	&._select-checkbox {
 	}
+	&_control {
+		.select__title {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 20px;
+			color: rgba(0, 0, 0, 0.5);
+		}
+		.select__value {
+			&::after{
+				content:'\e900';
+				@extend %ic;
+				font-size: rem(8);
+			}
+		}
+		.select__options {
+			color: rgba(0, 0, 0, 0.5);
+		}
+	}
 }
 
 // Тег

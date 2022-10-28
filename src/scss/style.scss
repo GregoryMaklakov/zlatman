@@ -62,7 +62,7 @@ $responsiveType: 1;
 
 body {
 	font-weight: 500;
-	height: rem(4000);
+	//height: rem(4000);
 	// Скролл заблокирован
 	.lock & {
 		overflow: hidden;
@@ -154,3 +154,4 @@ body {
 
 // Подключение стилей отдельных страниц
 @import "home";
+@import "catalog";

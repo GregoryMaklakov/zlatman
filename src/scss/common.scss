@@ -97,7 +97,7 @@
 //  ==================================================   Item Catalog Card END   ==================================================
 
 
-//====================================================    Product Card    =========================================================
+//====================================================    Product Card  general  =========================================================
 .product-slide {
     &__item {
         display: flex;
@@ -260,7 +260,9 @@
         justify-self: end;
     }
 }
-//====================================================    Product Card  END   =========================================================
+//====================================================    Product Card  general  END   =========================================================
+
+// Title в хиты продах и ацкии  ==================================================
 
 .title-log {
     font-weight: 700;
@@ -295,6 +297,117 @@
                 font-size: rem(14);
                 top: 40%;
             }
+        }
+    }
+}
+
+// Хдебные крошки   =====================================
+
+.breadcrumbs {
+    white-space: nowrap;
+    overflow: auto;
+    &__list {
+        display: flex;
+        margin-bottom: rem(25);
+    }
+
+    &__item {
+
+    }
+
+    &__link {
+        font-weight: 500;
+        font-size: rem(16);
+        line-height: math.div( 20, 16);
+        color: #141414;
+        opacity: 0.5;
+        display: flex;
+        align-items: center;
+        &::after{
+            content:'\e900';
+            @extend %ic;
+            transform: rotate(-90deg);
+            font-size: rem(6);
+            margin: 0px em(10, 6);
+        }
+    }
+
+    &__current {
+        font-weight: 500;
+        font-size: rem(16);
+        line-height: math.div( 20, 16);
+        color: $mainOrangeColor;
+    }
+}
+
+// title    ==============================================
+.title {
+    font-weight: 700;
+    font-size: rem(24);
+    line-height: math.div( 29, 24);
+    color: #141414;
+    margin-bottom: rem(25);
+}
+
+// Pagging  =================================================
+
+.pagging {
+    max-width: rem(300);
+    display: flex;
+    &__arrow {
+        font-size: rem(10);
+        margin: rem(0) rem(12);
+        color: $mainOrangeColor;
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover){
+            &:hover{
+                color: $mainOrangeColor;
+            }
+        }
+        &:disabled {
+            color: rgba(0, 0, 0, 0.12);
+        }
+    }
+
+    &__arrow-left {
+        &::before{
+            transform: rotate(-90deg);
+            
+        }
+    }
+
+    &__list {
+        display: flex;
+       
+    }
+
+    &__item {
+    }
+
+    &__link {
+        margin: rem(0) rem(5);
+        width: rem(34);
+        height: rem(34);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease 0s;
+        
+        &._active {
+            background-color: #F6B817;
+            color: #ffff;
+        }
+        @media (any-hover: hover){
+            &:hover{
+                box-shadow: 0px 0px 0px 1px $mainOrangeColor;
+            }
+        }
+    }
+
+    &__arrow-right {
+        &::before{
+            transform: rotate(90deg);
         }
     }
 }
