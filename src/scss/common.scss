@@ -110,12 +110,33 @@
         gap: rem(20);
         width: 100%;
         transition: box-shadow 0.3s ease 0s;
+        position: relative;
+        @media (max-width: em(374)){
+            max-width: rem(290);
+        }
         @media (any-hover: hover){
             &:hover{
                 box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.3);
             }
         }
     }
+    &__sale {
+        position: absolute;
+        top: rem(20);
+        left: 0;
+        background-color: $mainOrangeColor;
+        //z-index: 2;
+        width: rem(90);
+        height: rem(35);
+        font-weight: 600;
+        font-size: rem(18);
+        line-height: math.div( 22, 18);
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     &__button {
         width: 100%;
         position: relative;
@@ -349,11 +370,14 @@
     margin-bottom: rem(25);
 }
 
-// Pagging  =================================================
+// Pagging ( перелистование страниц в каталоге )  =================================================
 
 .pagging {
     max-width: rem(300);
     display: flex;
+    @media (max-width: em(424)){
+          display: none;
+    }
     &__arrow {
         font-size: rem(10);
         margin: rem(0) rem(12);
@@ -372,7 +396,7 @@
     &__arrow-left {
         &::before{
             transform: rotate(-90deg);
-            
+            cursor:no-drop
         }
     }
 
@@ -409,5 +433,31 @@
         &::before{
             transform: rotate(90deg);
         }
+        @media (any-hover: hover){
+            &:hover{
+                box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.12);
+                border-radius: rem(4)
+            }
+        }
+    }
+}
+
+// TITLE 
+.title-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 100%;
+    background: #141414;
+    padding: rem(13) rem(30);
+    font-weight: 600;
+    font-size: rem(20);
+    line-height: math.div( 24, 20);
+    color: #FFFFFF;
+    &::before{
+        transition: all 0.3s ease 0s;
+        color: $mainOrangeColor;
+        font-size: rem(10);
     }
 }

@@ -35,12 +35,138 @@
                         </div>
 
                         <div class="catalog__body body-catalog">
-                            <div class="body-catalog__filter"></div>
+                            <section class="body-catalog__filter filter-body">
+                                <div class="filter-body__title">Фильтр товаров</div>
 
-                            <div class="body-catalog__content content-catalog">
+                                <div data-spollers class="filter-body__items">
+                                    <div class="filter-body__price price-filter">
+										<button type="button" class="price-filter__title">Цена</button>
+										<div data-range class="price-filter__body">
+											<div class="price-filter__inputs">
+												<input data-range-from="0" autocomplete="off" type="text" value="500" name="form[]" class="price-filter__input">
+												<input data-range-to="5000" autocomplete="off" type="text" value="1000" name="form[]" class="price-filter__input">
+											</div>
+											<div data-range-item class="price-filter__range"></div>
+										</div>
+									</div>
+
+                                    <div class="filter-body__price indastry-filter">
+										<button data-spoller type="button" class="indastry-filter__title title-filter _icon-spoler-arrow">Производство</button>
+										<div class="indastry-filter__body">
+											<div class="indastry-filter__checkbox checkbox">
+                                                <input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                <label for="c_1" class="checkbox__label"><span class="checkbox__text">АиР <small>(250)</small> </span></label>
+                                            </div>
+                                            <div class="indastry-filter__checkbox checkbox">
+                                                <input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                <label for="c_2" class="checkbox__label"><span class="checkbox__text">Булат Сергея Баранова <small>(25)</small> </span></label>
+                                            </div>
+                                            <div class="indastry-filter__checkbox checkbox">
+                                                <input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                <label for="c_3" class="checkbox__label"><span class="checkbox__text">Булат Умерова<small>(265)</small> </span></label>
+                                            </div>
+                                            <div class="indastry-filter__checkbox checkbox">
+                                                <input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                <label for="c_4" class="checkbox__label"><span class="checkbox__text">ЗЗОСС<small>(18)</small> </span></label>
+                                            </div>
+                                            <div class="indastry-filter__checkbox checkbox">
+                                                <input id="c_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                <label for="c_5" class="checkbox__label"><span class="checkbox__text">ЗИК<small>(177)</small> </span></label>
+                                            </div>
+                                            <div class="indastry-filter__checkbox checkbox">
+                                                <input id="c_6" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                <label for="c_6" class="checkbox__label"><span class="checkbox__text">ЗЛАТКО<small>(170)</small> </span></label>
+                                            </div>
+                                            <div class="indastry-filter__checkbox checkbox">
+                                                <input id="c_7" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                <label for="c_7" class="checkbox__label"><span class="checkbox__text">ЗлатПрофит<small>(60)</small> </span></label>
+                                            </div>
+                                            <div class="indastry-filter__checkbox checkbox">
+                                                <input id="c_8" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                <label for="c_8" class="checkbox__label"><span class="checkbox__text">ЗОК<small>(340)</small> </span></label>
+                                            </div>
+                                            <div class="indastry-filter__checkbox checkbox">
+                                                <input id="c_9" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                <label for="c_9" class="checkbox__label"><span class="checkbox__text">НБК<small>(40)</small> </span></label>
+                                            </div>
+                                            <div class="indastry-filter__checkbox checkbox">
+                                                <input id="c_10" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                <label for="c_10" class="checkbox__label"><span class="checkbox__text">НИКОН<small>(430)</small> </span></label>
+                                            </div>
+                                            <div class="indastry-filter__checkbox checkbox">
+                                                <input id="c_11" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                <label for="c_11" class="checkbox__label"><span class="checkbox__text">НИКОН<small>(11)</small> </span></label>
+                                            </div>
+									    </div>
+                                    </div>
+
+                                    <div class="filter-body__price metall-filter">
+                                        <button data-spoller type="button" class="metall-filter__title title-filter  _icon-spoler-arrow">Сталь</button>
+                                        <div class="metall-filter__body">
+                                            <div class="metall-filter__checkbox checkbox">
+                                                <input id="c_12" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                <label for="c_12" class="checkbox__label"><span class="checkbox__text">100Х13М <small>(220)</small> </span></label>
+                                            </div>
+                                            <div class="metall-filter__checkbox checkbox">
+                                                <input id="c_13" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                <label for="c_13" class="checkbox__label"><span class="checkbox__text">95Х18 <small>(240)</small> </span></label>
+                                            </div>
+                                            <div class="metall-filter__checkbox checkbox">
+                                                <input id="c_14" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                <label for="c_14" class="checkbox__label"><span class="checkbox__text">50Х14МФ <small>(20)</small> </span></label>
+                                            </div>
+                                            <div class="metall-filter__checkbox checkbox">
+                                                <input id="c_15" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                <label for="c_15" class="checkbox__label"><span class="checkbox__text">40Х10С2М (ЭИ-107) <small>(45)</small> </span></label>
+                                            </div>
+                                            <div class="metall-filter__checkbox checkbox">
+                                                <input id="c_16" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                <label for="c_16" class="checkbox__label"><span class="checkbox__text">110Х18М-ШД <small>(41)</small> </span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-body__price metall-filter">
+                                        <button data-spoller type="button" class="metall-filter__title title-filter  _icon-spoler-arrow">Золочение</button>
+                                        <div class="metall-filter__body">
+                                            <div class="metall-filter__checkbox checkbox">
+                                                <input id="c_17" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                <label for="c_17" class="checkbox__label"><span class="checkbox__text">Золочение клинка</span></label>
+                                            </div>
+                                            <div class="metall-filter__checkbox checkbox">
+                                                <input id="c_18" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                <label for="c_18" class="checkbox__label"><span class="checkbox__text">Золочение рисунка на клинке</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="metall-filter">
+                                        <button data-spoller type="button" class="indastry-filter__title title-filter _icon-spoler-arrow"">Общая длина, мм</button>
+                                        <div data-range class="metall-filter__body">
+                                            <div class="price-filter__inputs">
+                                                <input data-range-from="60" autocomplete="off" type="text" value="60" name="form[]" class="price-filter__input">
+                                                <input data-range-to="120" autocomplete="off" type="text" value="80" name="form[]" class="price-filter__input">
+                                            </div>
+                                            <div data-range-item class="price-filter__range"></div>
+                                        </div>
+                                    </div>
+                                    <div class="metall-filter">
+                                        <button data-spoller type="button" class="indastry-filter__title title-filter _icon-spoler-arrow"">Ширина клинка, мм</button>
+                                        <div data-range class="metall-filter__body">
+                                            <div class="price-filter__inputs">
+                                                <input data-range-from="20" autocomplete="off" type="text" value="20" name="form[]" class="price-filter__input">
+                                                <input data-range-to="68" autocomplete="off" type="text" value="40" name="form[]" class="price-filter__input">
+                                            </div>
+                                            <div data-range-item class="price-filter__range"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="body-catalog__content content-catalog">
                                 <div class="content-catalog__catalog">
                                     <div class="product-slide__body">
                                         <div class="product-slide__item item-product">
+                                            <div class="product-slide__sale">-50%</div>
                                             <a href="#" class="item-product__image">
                                                 <img src="@img/product-card-01.jpg" alt="image">
                                             </a>
@@ -116,6 +242,7 @@
                                     </div>
                                     <div class="product-slide__body">
                                         <div class="product-slide__item item-product">
+                                            <div class="product-slide__sale">-50%</div>
                                             <a href="#" class="item-product__image">
                                                 <img src="@img/product-card-01.jpg" alt="image">
                                             </a>
@@ -315,7 +442,7 @@
                                         <button type="submit" class="pagging__arrow pagging__arrow-right _icon-spoler-arrow"></button>
                                     </div>
                                 </div>
-                            </div>                                
+                            </section>                                
                         </div>
                         
                     </div>

@@ -80,13 +80,17 @@
 /* Slider size and handle placement;
  */
 .noUi-horizontal {
-	height: 18px;
+	height: 2px;
 }
 .noUi-horizontal .noUi-handle {
-	width: 34px;
-	height: 28px;
+	width: rem(18);
+	height: rem(18);
 	right: -17px;
-	top: -6px;
+	top: -8px;
+	background: #E8AA31;
+	box-shadow: 0px 4px 20px rgba(232, 170, 49, 0.3);
+	border-radius: 50%;
+
 }
 .noUi-vertical {
 	width: 18px;
@@ -96,6 +100,7 @@
 	height: 34px;
 	right: -6px;
 	bottom: -17px;
+	
 }
 .noUi-txt-dir-rtl.noUi-horizontal .noUi-handle {
 	left: -17px;
@@ -105,16 +110,17 @@
  * Giving the connect element a border radius causes issues with using transform: scale
  */
 .noUi-target {
-	background: #fafafa;
+	background: #E8AA31;
 	border-radius: 4px;
-	border: 1px solid #d3d3d3;
+	height: rem(3);
+	//border: 2px solid #E8AA31;
 	box-shadow: inset 0 1px 1px #f0f0f0, 0 3px 6px -5px #bbb;
 }
 .noUi-connects {
 	border-radius: 3px;
 }
 .noUi-connect {
-	background: #3fb8af;
+	border: 2px solid #000000;
 }
 /* Handles and cursors;
  */
@@ -136,16 +142,18 @@
 }
 /* Handle stripes;
  */
-.noUi-handle:before,
-.noUi-handle:after {
+ .noUi-handle:before,
+.noUi-handle {
 	content: "";
-	display: block;
 	position: absolute;
-	height: 14px;
-	width: 1px;
-	background: #e8e7e6;
-	left: 14px;
-	top: 6px;
+	height: 10px;
+	width: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #141414;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+	border-radius: 50%;
 }
 .noUi-handle:after {
 	left: 17px;
@@ -159,7 +167,7 @@
 }
 .noUi-vertical .noUi-handle:after {
 	top: 17px;
-}
+} 
 /* Disabled state;
  */
 [disabled] .noUi-connect {
@@ -270,6 +278,7 @@
 	padding: 5px;
 	text-align: center;
 	white-space: nowrap;
+	display: none;
 }
 .noUi-horizontal .noUi-tooltip {
 	transform: translate(-50%, 0);

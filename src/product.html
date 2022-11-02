@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"карточка товара"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page__inner">
+
+				<div class="catalog">
+                    <div class="catalog__container">
+                        <div class="catalog__head-wrapper">
+                            <div class="catalog__head">
+                                <div class="catalog__title title">Разделочные ножи</div>
+                                <nav class="breadcrumbs">
+                                    <ul class="breadcrumbs__list">
+                                        <li class="breadcrumbs__item">
+                                            <a href="#" class="breadcrumbs__link">Главня</a>
+                                        </li>
+                                        <li class="breadcrumbs__item">
+                                            <span class="breadcrumbs__current">Разделочные ножи</ы>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="catalog__control">
+                                <select name="form[]" data-class-modif="control">
+                                    <option value="1" selected>По популярности</option>
+                                    <option value="2">Пункт №2</option>
+                                    <option value="3">Пункт №3</option>
+                                    <option value="4">Пункт №4</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

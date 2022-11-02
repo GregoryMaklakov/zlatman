@@ -6,12 +6,11 @@
     &__head-wrapper {
         display: flex;
         justify-content: space-between;
-    }
-
-    &__head {
-    }
-
-    &__title {
+        @media (max-width:$mobile){
+             flex-direction: column; 
+             justify-content: center;
+             align-items: center;
+        }
     }
 
     &__control {
@@ -26,28 +25,12 @@
     grid-template-columns: rem(375) 1fr;
     gap: rem(30);
     @include adaptiveValue("padding-bottom", 120, 30);
-    &__filter {
-    }
-
-    &__content {
-        
+    @media (max-width: em(1207)){
+        display: grid;
+        grid-template-columns: auto;
     }
 }
 
-
-.catalog {
-
-    &__body {
-    }
-}
-.body-catalog {
-
-    &__filter {
-    }
-
-    &__content {
-    }
-}
 .content-catalog {
         display: flex;
         flex-direction: column;
@@ -59,9 +42,16 @@
         @media (max-width: em(1360)){
             grid-template-columns: repeat(auto-fill,minmax(rem(290), rem(375)));
         }
-    }
-
-    &__footer {
+        @media (max-width: em(1207)){
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media (max-width: em(1000)){
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width:$mobile){
+            grid-template-columns: 1fr; 
+        }
     }
 }
 
@@ -69,6 +59,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width:$mobile){
+        flex-direction: column;
+        gap: rem(20);
+        align-items: center;
+        justify-content: center; 
+    }
     &__more {
         border: 2px solid $mainOrangeColor;
         filter: drop-shadow(0px 4px 20px rgba(232, 170, 49, 0.43));
@@ -84,14 +80,114 @@
                 background-color: $mainOrangeColor;
             }
         }
+        @media (max-width:$mobile){
+            padding: rem(12) rem(45);
+        }
     }
     &__more:focus {
         border: 2px solid #ffff;
-    }
-
-    &__pagging {
     }
 }
 
 
 //========================================================================================================================================================
+
+//=======================================   FILTER  
+.filter-body {
+    background: #FEFEFE;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    &__title {
+        padding: rem(23) rem(30);
+        background-color: #141414;
+        font-weight: 700;
+        font-size: rem(20);
+        line-height: math.div( 24, 20);
+        color: #FFFFFF;
+    }
+}
+
+.price-filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items:flex-start;
+    gap: rem(30);
+    padding: rem(30) rem(30) rem(20) rem(30);
+    &__title {
+        width: 100%;
+        text-align: left;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        @media (max-width:$mobile){
+            width: 100%; 
+        }
+    }
+
+    &__inputs {
+        display: flex;
+        border-radius: 2px;
+        margin-bottom: rem(30);
+        @media (max-width:$mobile){
+             flex-direction: column;
+             justify-content: center;
+             align-items: center; 
+        }
+    }
+
+    &__input {
+        width: rem(156);
+        padding: rem(11) rem(36);
+        font-weight: 500;
+        font-size: rem(16);
+        line-height: math.div( 20, 16);
+        color: #141414;
+        border: 1px solid #CBCBCB;
+    }
+}
+
+.indastry-filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items:flex-start;
+    padding-top: rem(20);
+
+    &__body {
+        padding: rem(30);
+        @media (max-width:$mobile){
+            width: 100%; 
+        }
+    }
+}
+
+.metall-filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items:flex-start;
+    padding-top: rem(20);
+    &__body {
+        padding: rem(30);
+        @media (max-width:$mobile){
+            width: 100%; 
+        }
+    }
+}
+
+.checkbox {
+    &__text {
+        margin-bottom: rem(20);
+        small {
+            font-size: 16px;
+            line-height: 20px;
+            color: #E8AA31;
+            margin-left: rem(10);
+
+        }
+    }
+}
+//========================================================================================================================================================
+
