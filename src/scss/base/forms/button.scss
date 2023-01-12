@@ -14,4 +14,52 @@
     font-size: rem(20);
     line-height: math.div( 46, 20);
     color: #FFFFFF;
+	&-cart {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		transition: all 0.3s ease 0s;
+		cursor: pointer;
+		&::after{
+			content:'';
+			position: absolute;
+			display: block;
+			background: url(../img/icons/cart.png) no-repeat center center / cover;
+			top: 50%;
+			transform: translateY(-50%);
+			right: rem(40);
+			width: rem(20);
+			height: rem(20);
+			color:#FEFEFE;
+			opacity: 0;
+			transition: all 0.3s ease 0s;
+		}
+		@media (any-hover: hover){
+			&:hover{
+				text-indent: -20px;   
+				&::after{
+					content:'';
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&-black {
+		background: #000000;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 18px;
+		padding: rem(15) rem(10);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover){
+			&:hover{
+				box-shadow: 0px 0px 0px 2px $mainOrangeColor;
+				background-color: #FEFEFE;
+				color: #000000;
+			}
+		}
+	}
 }

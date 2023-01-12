@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation, Pagination, Parallax, Autoplay } from 'swiper';
+import Swiper, { Navigation, Pagination, Parallax, Autoplay, Thumbs} from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -233,6 +233,87 @@ function initSliders() {
 			on: {
 			}
 		});
+	}
+
+	// Product Slider
+	if (document.querySelector('.thumbs-images')) {
+		const thumbsSwiper = new Swiper('.thumbs-images', {
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation, Pagination, Thumbs],
+			//effect: 'fade',
+			observer: true,
+			watchOverflow: true,
+			observeParents: true,
+			slidesPerView: 4,
+			spaceBetween: 16,
+			//autoHeight: true,
+			speed: 800,
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+			// Dotts
+			pagination: {
+				el: '.products-new__dotts',
+				clickable: true,
+				dynamicBullets: true
+			},
+
+			breakpoints: {
+				320: {
+					slidesPerView: 0,
+					spaceBetween: 16,
+				},
+				768: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 3,
+				},
+				1330: {
+					slidesPerView: 4,
+					spaceBetween: 16,
+				},
+			},
+			on: {
+				init: function (swiper) {
+
+				}
+			}
+		});
+		new Swiper('.images-product__slider', {
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation, Pagination, Thumbs],
+			//effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			thumbs: {
+				swiper: thumbsSwiper
+			},
+			observer: true,
+			watchOverflow: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			//autoHeight: true,
+			speed: 800,
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+			on: {
+				init: function (swiper) {
+
+				}
+			}
+		});
+
 	}
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)

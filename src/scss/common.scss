@@ -325,20 +325,17 @@
 // Хдебные крошки   =====================================
 
 .breadcrumbs {
-    white-space: nowrap;
+    //white-space: nowrap;
     overflow: auto;
     &__list {
         display: flex;
         margin-bottom: rem(25);
-    }
-
-    &__item {
-
+        align-items: center;
     }
 
     &__link {
         font-weight: 500;
-        font-size: rem(16);
+        @include adaptiveValue("font-size", 16, 10);
         line-height: math.div( 20, 16);
         color: #141414;
         opacity: 0.5;
@@ -355,11 +352,40 @@
 
     &__current {
         font-weight: 500;
-        font-size: rem(16);
+        @include adaptiveValue("font-size", 16, 10);
         line-height: math.div( 20, 16);
         color: $mainOrangeColor;
     }
+
+    &__current--product {
+        font-weight: 500;
+        @include adaptiveValue("font-size", 16, 10);
+        line-height: math.div( 20, 16);
+        color: #141414;
+        opacity: 0.5;
+        display: flex;
+        align-items: center;
+        &::after{
+            content:'\e900';
+            @extend %ic;
+            transform: rotate(-90deg);
+            font-size: rem(6);
+            margin: 0px em(10, 6);
+        }
+    }
+
+    &__name {
+        font-weight: 500;
+        @include adaptiveValue("font-size", 16, 10);
+        line-height: math.div( 20, 16);
+        color: $mainOrangeColor;
+    }
+
+    &__name--product {
+    }
 }
+
+
 
 // title    ==============================================
 .title {

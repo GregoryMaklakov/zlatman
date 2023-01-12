@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 	@@include('html/_head.htm',{
-	"title":"карточка товара"
+	"title":"Kарточка товара"
 	})
 	<body>
 		<div class="wrapper">
@@ -12,27 +12,206 @@
                     <div class="catalog__container">
                         <div class="catalog__head-wrapper">
                             <div class="catalog__head">
-                                <div class="catalog__title title">Разделочные ножи</div>
                                 <nav class="breadcrumbs">
                                     <ul class="breadcrumbs__list">
                                         <li class="breadcrumbs__item">
-                                            <a href="#" class="breadcrumbs__link">Главня</a>
+                                            <a href="index.html" class="breadcrumbs__link">Главня</a>
                                         </li>
-                                        <li class="breadcrumbs__item">
-                                            <span class="breadcrumbs__current">Разделочные ножи</ы>
+                                        <li class="breadcrumbs__item breadcrumbs__item--product">
+                                            <a href="catalog.html"  class="breadcrumbs__current breadcrumbs__current--product">Разделочные ножи</a>
+                                        </li>
+                                        <li class="breadcrumbs__item breadcrumbs__item--product">
+                                            <span class="breadcrumbs__name breadcrumbs__name--product">Нож Снегирь</span>
                                         </li>
                                     </ul>
                                 </nav>
                             </div>
-                            <div class="catalog__control">
-                                <select name="form[]" data-class-modif="control">
-                                    <option value="1" selected>По популярности</option>
-                                    <option value="2">Пункт №2</option>
-                                    <option value="3">Пункт №3</option>
-                                    <option value="4">Пункт №4</option>
-                                </select>
-                            </div>
                         </div>
+                        <section class="product-block">
+                            <div class="product-block__images images-product">
+
+                                <div class="images-product__slider swiper">
+                                    <div class="images-product__wrapper swiper-wrapper">
+                                        <div class="images-product__slide swiper-slide -ibg">
+                                            <img src="@img/product/01.jpg" alt="image">
+                                        </div>
+                                        <div class="images-product__slide swiper-slide -ibg">
+                                            <img src="@img/product/02.jpg" alt="image">
+                                        </div>
+                                        <div class="images-product__slide swiper-slide -ibg">
+                                            <img src="@img/product/03.jpg" alt="image">
+                                        </div>
+                                        <div class="images-product__slide swiper-slide -ibg">
+                                            <img src="@img/product/04.jpg" alt="image">
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="images-product__thumbs thumbs-images">
+                                    <div class="thumbs-images__wrapper swiper-wrapper">
+                                        <div class="thumbs-images__slide swiper-slide -ibg">
+                                            <img src="@img/product/01.jpg" alt="image">
+                                        </div>
+                                        <div class="thumbs-images__slide swiper-slide -ibg">
+                                            <img src="@img/product/02.jpg" alt="image">
+                                        </div>
+                                        <div class="thumbs-images__slide swiper-slide -ibg">
+                                            <img src="@img/product/03.jpg" alt="image">
+                                        </div>
+                                        <div class="thumbs-images__slide swiper-slide -ibg">
+                                            <img src="@img/product/04.jpg" alt="image">
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="product-block__information information-product">
+                                <div class="information-product__header header-informarion">
+                                    <div class="header-informarion__line">
+                                        <h1 class="header-informarion__title">Нож Снегирь</h1>
+                                        <div class="header-informarion__icons">
+                                            <a href="#" class="header-informarion__link _icon-compare"></a>
+                                            <a href="#" class="header-informarion__link _icon-favorite_heart"></a>
+                                        </div>
+                                    </div>
+                                    <div class="header-informarion__presence">В наличии</div>
+                                    <div class="rating rating_set header-informarion__rating">
+                                        <div class="rating__body">
+                                            <div class="rating__active"></div>
+                                            <div class="rating__items">
+                                                <input type="radio" class="rating__item" value="1" name="rating">
+                                                <input type="radio" class="rating__item" value="2" name="rating">
+                                                <input type="radio" class="rating__item" value="3" name="rating">
+                                                <input type="radio" class="rating__item" value="4" name="rating">
+                                                <input type="radio" class="rating__item" value="5" name="rating">
+                                            </div>
+                                        </div>
+                                        <div class="rating__value">3.6</div>
+                                    </div>                                    
+                                </div>
+
+                                <div class="information-product__midle midle-information">
+                                    <div class="midle-information__column">
+                                        <div class="midle-information__title">Артикул:</div>
+                                        <div class="midle-information__title">Торговая марка:</div>
+                                        <div class="midle-information__title">Серия:</div>
+                                        <div class="midle-information__title">Бонусные баллы:</div>
+                                    </div>
+                                    <div class="midle-information__column">
+                                        <div class="midle-information__sub">AF0000001952</div>
+                                        <div class="midle-information__sub">WUESTHOF (Германия)</div>
+                                        <div class="midle-information__sub">Ножи серии Classic Ikon</div>
+                                        <div class="midle-information__sub">38</div>
+                                    </div>
+                                </div>
+                                <div class="information-product__options options-product">
+                                    <div class="options-product__label label">Сталь</div>
+                                    <div class="options-product__value value">
+                                        <select name="form[]" data-class-modif="form">
+                                            <option value="1" selected>Выбрать сталь</option>
+                                            <option value="2">100Х13М</option>
+                                            <option value="3">110Х18М-ШД</option>
+                                            <option value="4">40Х10С2М (ЭИ-107)</option>
+                                            <option value="5">50Х14МФ</option>
+                                            <option value="6">95Х18-ШД</option>
+                                            <option value="7">AUS-8)</option>
+                                        </select>
+                                    </div>
+                                    <div class="options-product__label label">Рукоять</div>
+                                    <div class="options-product__value value">
+                                        <select name="form[]" data-class-modif="form">
+                                            <option value="1" selected>Выбрать pукоять</option>
+                                            <option value="2">Mercorne</option>
+                                            <option value="3">Березовый кап</option>
+                                            <option value="4">Бубинго</option>
+                                            <option value="5">Граб</option>
+                                            <option value="6">Дуб</option>
+                                            <option value="7">Комбинированная</option>
+                                        </select>
+                                    </div>
+                                    <div class="options-product__label label">Гарда и тыльник</div>
+                                    <div class="options-product__value value">
+                                        <select name="form[]" data-class-modif="form">
+                                            <option value="1" selected>Выбрать гарда и тыльник</option>
+                                            <option value="2">Литье</option>
+                                            <option value="3">Литой Пума</option>
+                                            <option value="4">Металлический</option>
+                                            <option value="5">Литой Барс</option>
+                                            <option value="6">Нержавеющая сталь</option>
+                                            <option value="7">Комбинированная</option>
+                                        </select>
+                                    </div>
+                                    <div class="options-product__label label">Обработка клинка</div>
+                                    <div class="options-product__value value">
+                                        <select name="form[]" data-class-modif="form">
+                                            <option value="1" selected>Выбрать обработку клинка</option>
+                                            <option value="2">1</option>
+                                            <option value="3">2</option>
+                                            <option value="4">3</option>
+                                            <option value="5">4</option>
+                                            <option value="6">5</option>
+                                            <option value="7">6</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="information-product__actions actions-product">
+                                    <div class="actions-product__prices">
+                                        <div class="actions-product__price">65</div>
+                                        <div class="actions-product__tippy">+ 449 баллов за покупку <span data-tippy-content="Вам будут начислены баллы в размере 5% 
+                                            от стоимости покупки. Их можно будет использовать 
+                                            на оплату последующих заказов." >?</span></div>
+                                    </div>
+                                    <div class="actions-product__row">
+                                        <div data-quantity class="actions-product__quantity quantity">
+                                            <button data-quantity-plus type="button" class="quantity__button quantity__button_plus"></button>
+                                            <div class="quantity__input">
+                                                <input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+                                            </div>
+                                            <button data-quantity-minus type="button" class="quantity__button quantity__button_minus"></button>
+                                        </div>
+                                        <div class="actions-product__buttons">
+                                            <a href="" class="actions-product__cart button button-cart">В корзину</a>
+                                            <a href="" class="actions-product__cart button button-black">Купить в 1 клик</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="catalog__tabs tabs-info">
+                            <div data-tabs class="tabs-info">
+                                <nav data-tabs-titles class="tabs-info__navigation">
+                                    <button type="button" class="tabs-info__title _tab-active">Описание</button>
+                                    <button type="button" class="tabs-info__title">Характеристика</button>
+                                    <button type="button" class="tabs-info__title">Отзывы</button>
+                                    <button type="button" class="tabs-info__title">Доставка</button>
+                                </nav>
+                                <div data-tabs-body class="tabs-info__content">
+                                    <div class="tabs-info__body">
+                                        Легкий удобный нож с клинком, имеющим пологие вогнутые линзовидные спуски на две трети ширины клинка, образующие тонкое, 
+                                        прекрасно режущее лезвие толщиной около 0,6 мм в районе подводов. 
+                                        Обух клинка со спинкой рукояти имеет одну плавную дугообразную линию. На пяте перед рукоятью есть подпальцевый вырез для точных работ. 
+                                        Необходимо проявлять некоторую осторожность при работе с большими боковыми нагрузками на лезвие ножа, ввиду небольшой толщины клинка 
+                                        в рабочей части. 
+                                        Монтаж рукояти накладной плашечный. На навершии рукояти, функцию которого выполняет выступающий из под плашек хвостовик, 
+                                        имеется отверстие под темляк. Этот нож удобный помощник при работе с продуктами и охоте на боровую и водоплавающую дичь.
+                                    </div>
+                                    <div class="tabs-info__body">
+                                        Характеристики
+                                    </div>
+                                    <div class="tabs-info__body">
+                                        Отзывы
+                                    </div>
+                                    <div class="tabs-info__body">
+                                        Доставка
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
                         
                     </div>
                 </div>
