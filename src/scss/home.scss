@@ -9,10 +9,10 @@
 }
 
 .main-block {
-    background: url(img/main-block/bg.jpg) center / cover no-repeat;
+    background: url(../img/main-block/bg.jpg) center / cover no-repeat;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
     @media (max-width:$mobile){
-        background: url(img/main-block/bg-mobile.jpg ) center / cover no-repeat;
+        background: url(../img/main-block/bg-mobile.jpg ) center / cover no-repeat;
     }
     &__container {
         padding-top: rem(48);
@@ -341,7 +341,7 @@
 //=====================================================  NEW Product-Slider   ==========================================================================
 
 .new-product-slider {
-    background: url(img/new-products-bg.jpg) center / cover no-repeat;
+    background: url(../img/new-products-bg.jpg) center / cover no-repeat;
     padding: rem(40) 0px;
     &__container {
         display: grid;
@@ -586,7 +586,7 @@
 //=====================================================     Footer descr TOP   ==============================================================================
 
 .footer-descr {
-    background: url(img/bg-footer-top.jpg) center / cover no-repeat;
+    background: url(../img/bg-footer-top.jpg) center / cover no-repeat;
     &__container {
         padding-top: rem(60);
         padding-bottom: rem(60);
